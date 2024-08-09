@@ -25,7 +25,7 @@ export function ReadQRCode() {
     }, [participants])
 
     return (
-        <main className='bg-blue-500 w-screen h-screen flex flex-col justify-center items-center gap-4'>
+        <main className='w-screen h-screen flex flex-col justify-center items-center gap-4'>
             <img className="w-72" height={300} width={300} alt="QRCode" src={`http://localhost:8080/api/drawings/${drawingId}/qrcode`} />
             <p className="text-white w-72 text-xl">Scan the QRCode to participate</p>
             <div className="w-72">

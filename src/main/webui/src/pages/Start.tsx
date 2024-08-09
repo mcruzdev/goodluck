@@ -21,7 +21,7 @@ export function Start() {
     }
 
     return (
-        <main className='bg-blue-500 w-screen h-screen flex flex-col justify-center items-center gap-4'>
+        <main className='w-screen h-screen flex flex-col justify-center items-center gap-4'>
             <div className="w-72 flex flex-col gap-4">
 
                 {winners.length ? <>
@@ -36,7 +36,7 @@ export function Start() {
                         <div className="flex flex-col space-y-1">
                             <input id="quantity" {...register("quantityOfWinners", {
                                 required: true, min: 1
-                            })} type="number" className="p-2 rounded-md outline-none" placeholder="Quantity of winners" />
+                            })} type="number" className="p-2 rounded-md outline-none text-blue-950 ring-2 ring-purple-900" placeholder="Quantity of winners" />
                         </div>
                         <button onSubmit={onSubmit} className='rounded-md bg-purple-800 p-2 shadow-md hover:bg-purple-700 disabled:cursor-not-allowed w-full'>Start</button>
                     </form>

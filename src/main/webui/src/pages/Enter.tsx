@@ -30,7 +30,7 @@ export default function Enter() {
     }
 
     return (
-        <main className='bg-blue-500 w-screen h-screen flex flex-col justify-center items-center gap-4'>
+        <main className='w-screen h-screen flex flex-col justify-center items-center gap-4'>
             <h1 className='text-center text-white font-thin text-5xl'>GoodLuck</h1>
 
             <form onSubmit={handleSubmit(onSubmit)} className="w-200 gap-y-2">
@@ -38,14 +38,14 @@ export default function Enter() {
                     <label htmlFor="name" className="text-white font-light" >Name</label>
                     <input {...register("name", {
                         required: true
-                    })} id="name" type="text" className="p-2 rounded-md outline-none" placeholder="Name" />
+                    })} id="name" type="text" className="p-2 rounded-md outline-none text-blue-950 ring-2 ring-purple-900" placeholder="Name" />
                     {errors.name && <p className="text-red-900">Invalid name</p>}
                 </div>
                 <div className="flex flex-col space-y-1 my-4">
                     <label htmlFor="email" className="text-white font-light">Email</label>
                     <input {...register("email", {
                         required: true
-                    })} id="email" type="email" className="p-2 rounded-md outline-none" placeholder="email@email.com" />
+                    })} id="email" type="email" className="p-2 rounded-md outline-none text-blue-950 ring-2 ring-purple-900" placeholder="email@email.com" />
                     {errors.email && <p className="text-red-900">Invalid email</p>}
 
                 </div>

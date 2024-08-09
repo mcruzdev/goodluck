@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <main className='bg-blue-500 w-screen h-screen flex flex-col justify-center items-center gap-4'>
+      <main className='w-screen h-screen flex flex-col justify-center items-center gap-4'>
         <div className='w-72 flex flex-col gap-4'>
 
           <h1 className='text-center text-white font-thin text-5xl'>GoodLuck</h1>
