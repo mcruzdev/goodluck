@@ -36,20 +36,20 @@ export default function Enter() {
             <form onSubmit={handleSubmit(onSubmit)} className="w-200 gap-y-2">
                 <div className="flex flex-col space-y-1">
                     <label htmlFor="name" className="text-white font-light" >Name</label>
-                    <input {...register("name", {
+                    <input autoComplete="false" {...register("name", {
                         required: true
                     })} id="name" type="text" className="p-2 rounded-md outline-none text-blue-950 ring-2 ring-purple-900" placeholder="Name" />
-                    {errors.name && <p className="text-red-900">Invalid name</p>}
+                    {errors.name && <p className="text-red-200">Invalid name</p>}
                 </div>
                 <div className="flex flex-col space-y-1 my-4">
                     <label htmlFor="email" className="text-white font-light">Email</label>
-                    <input {...register("email", {
+                    <input autoComplete="false" {...register("email", {
                         required: true
                     })} id="email" type="email" className="p-2 rounded-md outline-none text-blue-950 ring-2 ring-purple-900" placeholder="email@email.com" />
-                    {errors.email && <p className="text-red-900">Invalid email</p>}
+                    {errors.email && <p className="text-red-200">Invalid email</p>}
 
                 </div>
-                <button onSubmit={onSubmit} className='rounded-md text-white bg-purple-800 p-2 shadow-md hover:bg-purple-700 disabled:cursor-not-allowed w-full'>Enter</button>
+                <button onSubmit={onSubmit} className='rounded-md text-white bg-purple-800 p-2 shadow-md hover:bg-purple-700 disabled:cursor-not-allowed w-full transition-colors'>Enter</button>
             </form>
         </main>
     );
